@@ -9,6 +9,8 @@ A simple and easy golang socket server/client framework especially convenient fo
 - Supports TCP, UDP and Domain Socket.
 
 ### Usage
+go get github.com/jeremyko/gosof
+
 See the example folder for all examples.
 #### tcp echo server (Fixed-length header and variable-length body)
 ```go
