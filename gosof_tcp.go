@@ -45,7 +45,7 @@ func (h *Server) InitTcpServer(network string, ip string, port uint16) error {
 // --> use parameter.
 func (h *Server) InitTcpServerListenConfig(network string, ip string, port uint16, lc *net.ListenConfig) error {
 	// network : "tcp", "tcp4", "tcp6"
-	log.SetFlags(log.Llongfile)
+	//log.SetFlags(log.Llongfile)
 	connStr := fmt.Sprintf("%s:%d", ip, port)
 	_, h.GosofErr = net.ResolveTCPAddr(network, connStr)
 	if h.GosofErr != nil {
