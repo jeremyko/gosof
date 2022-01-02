@@ -14,6 +14,7 @@ go get github.com/jeremyko/gosof
 # or
 go mod tidy
 ```
+### Example
 
 See the example folder for all examples.
 #### tcp echo server (Fixed-length header and variable-length body)
