@@ -11,8 +11,7 @@ A simple and easy golang socket server/client framework especially convenient fo
 ### Usage
 ```bash
 go get github.com/jeremyko/gosof
-# or
-go mod tidy
+
 ```
 ### Example
 
