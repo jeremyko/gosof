@@ -51,7 +51,7 @@ func main() {
 		return
 	}
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 1000; i++ {
 		go func(index int) {
 			var binBufHeader bytes.Buffer
 			var binBufBody bytes.Buffer

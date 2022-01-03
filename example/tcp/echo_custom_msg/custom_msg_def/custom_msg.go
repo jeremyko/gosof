@@ -24,6 +24,8 @@ SOFTWARE.
 
 package custom_msg
 
+import "encoding/binary"
+
 // user specific custom data example
 
 // UserMsgHeader : fixed length header
@@ -36,9 +38,11 @@ type UserMsgHeader struct {
 // FixedHeaderSize :
 // padding을 고려하여 길이를 계산하는 unsafe.Sizeof 메서드는 사용할 수 없다.
 // 고정 길이 헤더를 위해서는 binary.Write를 사용해야하고, 이 방식에서는 데이터 패킹이 발생되기 때문이다.
+
+// use binary.Size method.
 // The unsafe.Sizeof method that calculates the length considering padding cannot be used.
 // This is because binary.Write must be used for fixed-length headers, and data packing occurs in this method.
-const FixedHeaderSize = 4 + 6 + 20
+var FixedHeaderSize = binary.Size(UserMsgHeader{}) // or -> const FixedHeaderSize = 4 + 6 + 20
 
 // UserMsgBody : body of dynamic length
 type UserMsgBody struct {
