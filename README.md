@@ -19,7 +19,7 @@ See the example folder for all examples.
 #### tcp echo server (Fixed-length header and variable-length body)
 ```go
 package custom_msg
-
+import "encoding/binary"
 // user specific custom data example
 
 // UserMsgHeader : fixed length header
@@ -29,7 +29,7 @@ type UserMsgHeader struct {
 	EtcInfo     [20]byte
 }
 
-const FixedHeaderSize = 4 + 6 + 20
+var FixedHeaderSize = binary.Size(UserMsgHeader{}) // or -> const FixedHeaderSize = 4 + 6 + 20
 
 // UserMsgBody : body of dynamic length
 type UserMsgBody struct {
@@ -178,7 +178,7 @@ func main() {
 		return
 	}
 
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 1000; i++ {
 		go func(index int) {
 			var binBufHeader bytes.Buffer
 			var binBufBody bytes.Buffer
