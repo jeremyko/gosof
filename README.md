@@ -1,4 +1,4 @@
-# Golang Socket Framework
+# Golang SOcket Framework
 
 ### What
 A simple yet quite practical golang socket server/client framework especially convenient for handling TCP fixed-length header and variable-length body using pure net package. Of course, it also supports udp and domain socket.
