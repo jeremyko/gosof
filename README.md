@@ -10,7 +10,7 @@ A simple yet quite practical golang socket server/client framework especially co
 
 ### Usage
 ```bash
-go get github.com/jeremyko/gosof
+go install github.com/jeremyko/gosof@latest
 
 ```
 ### Example
